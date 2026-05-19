@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proyecto Intermodular - 1º SMR</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f6f9;
+            color: #333;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+        }
+        h1 {
+            margin: 0;
+            font-size: 2.2em;
+        }
+        h2 {
+            color: #2c3e50;
+            border-bottom: 2px solid #bdc3c7;
+            padding-bottom: 5px;
+            font-size: 1.5em;
+            margin-top: 30px;
+        }
+        .container {
+            width: 90%;
+            max-width: 900px;
+            margin: 20px auto;
+        }
+        .modulo {
+            background-color: white;
+            padding: 25px;
+            margin-bottom: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+        .js-demo {
+            background-color: #ecf0f1;
+            padding: 15px;
+            border-radius: 5px;
+            margin-top: 15px;
+            border: 1px solid #bdc3c7;
+        }
+        input {
+            padding: 8px;
+            margin: 5px 0 15px 0;
+            width: calc(100% - 20px);
+            max-width: 300px;
+            display: block;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #2980b9;
+            color: white;
+            border: none;
+            padding: 10px 15px;
+            cursor: pointer;
+            border-radius: 4px;
+            margin-right: 5px;
+            margin-bottom: 5px;
+        }
+        button:hover {
+            background-color: #2471a3;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            font-size: 0.9em;
+        }
+        th, td {
+            border: 1px solid #bdc3c7;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #ecf0f1;
+            color: #2c3e50;
+        }
+        .pintado {
+            background-color: #27ae60;
+            color: white;
+            font-weight: bold;
+        }
+        .explicacion-semanas p {
+            margin-bottom: 15px;
+            background: #fff;
+            padding: 10px;
+            border-left: 4px solid #2980b9;
+        }
+        .foto-proyecto {
+            max-width: 100%;
+            height: auto;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            margin-top: 15px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <h1>Proyecto Intermodular 1º SMR</h1>
+    </header>
+
+    <div class="container">
+
+        <section class="modulo">
+            <h2>1. Aplicaciones Web (AW)</h2>
+            <p>El núcleo de este proyecto es la propia página web. Para crearla, he aplicado lo visto en la UT2 sobre HTML y CSS, estructurando el contenido y dándole diseño. Además, en la UT2b dimos JavaScript, por lo que he programado un pequeño script interactivo para demostrar su uso en la web.</p>
+            
+            <img src="./image/aweb.png" alt="Espacio para añadir la foto de Aplicaciones Web" class="foto-proyecto">
+
+            <div class="js-demo">
+                <h3>Prueba de JavaScript:</h3>
+                <label>Escribe tu nombre:</label>
+                <input type="text" id="nombre" placeholder="Ej. Juan">
+                
+                <label>Número de módulos aprobados:</label>
+                <input type="number" id="modulos" placeholder="Ej. 6">
+                
+                <button onclick="comprobarModulos()">Comprobar progreso</button>
+                
+                <p><strong>Resultado JS:</strong> <span id="resultado" style="color: #2980b9; font-weight: bold;">...</span></p>
+            </div>
+        </section>
+
+        <section class="modulo">
+            <h2>2. SASP y Digitalización</h2>
+            <p>Durante el módulo de SASP hemos estudiado la acción humana sobre el entorno (Tema 1) y la sostenibilidad de los productos (Tema 3). Al desarrollar plataformas web digitales (Digitalización), favorecemos los planes de sostenibilidad en las empresas (Tema 5), reduciendo el uso de papel y centralizando la información en entornos virtuales como Microsoft 365 o aulas Moodle.</p>
+            
+            <img src="./image/Sassp.png" alt="Espacio para añadir la foto de SASP y Digitalización" class="foto-proyecto">
+        </section>
+
+        <section class="modulo">
+            <h2>3. Montaje y Mantenimiento de Equipos (MMEQ)</h2>
+            <p>Para poder desarrollar páginas web y trabajar en informática, es fundamental conocer la arquitectura del ordenador (UT2). En este módulo hemos visto desde el ensamblaje paso a paso de un PC (UT4) hasta el mantenimiento preventivo y correctivo (UT5), comprobando voltajes de fuentes de alimentación, pitidos de la BIOS y el uso de herramientas de diagnóstico de hardware y software (UT6).</p>
+
+            <img src="./image/MMEQ.png" alt="Espacio para añadir la foto de MMEQ" class="foto-proyecto">
+        </section>
+
+        <section class="modulo">
+            <h2>4. Redes de Área Local (REDES)</h2>
+            <p>Para que esta página web pueda ser accesible, depende de una infraestructura de red. En el módulo de Redes hemos estudiado la instalación y configuración de equipos, así como la resolución de incidencias. Herramientas de diagnóstico de red, como el uso de comandos (test Traceroute), son esenciales para comprobar la conectividad.</p>
+
+            <img src="image/Redes_.png" alt="Espacio para añadir la foto de Redes" class="foto-proyecto">
+        </section>
+
+        <section class="modulo">
+            <h2>5. Sistemas Operativos Monopuesto (SOM)</h2>
+            <p>El desarrollo de este trabajo se ha apoyado en los conocimientos de SOM. Hemos trabajado gestionando particiones y el arranque del sistema, usando comandos tanto en entornos Linux como Windows. Además, hemos visto la importancia de las utilidades de mantenimiento y el software para la creación de copias de seguridad e imágenes del sistema.</p>
+
+            <img src="./image/SOM_.png" alt="Espacio para añadir la foto de SOM" class="foto-proyecto">
+        </section>
+
+        <section class="modulo">
+            <h2>6. Itinerario Personal para la Empleabilidad (IPE)</h2>
+            <p>Todo el trabajo informático, ya sea de montaje o de desarrollo frente a una pantalla, debe cumplir con la normativa de seguridad. En la UT8 de prevención de riesgos laborales hemos aprendido los procedimientos de seguridad para evitar daños, así como la correcta postura en el puesto de trabajo y la protección medioambiental.</p>
+
+            <img src="./image/IPE.png" alt="Espacio para añadir la foto de IPE" class="foto-proyecto">
+        </section>
+
+        <section class="modulo">
+            <h2>7. Temporalización (Diagrama de Gantt)</h2>
+            <p>El proyecto lo he desarrollado desde el 10 de abril hasta el 22 de mayo. A continuación explico qué tareas he realizado cada semana:</p>
+            
+            <div class="explicacion-semanas">
+                <p><strong>Semana 1 (10 - 16 abril):</strong> Recopilación de información. Estuve revisando los apuntes de las aulas virtuales de Moodle de todas las asignaturas para ver qué temas habíamos dado y cómo integrarlos en el texto de la web.</p>
+                <p><strong>Semana 2 (17 - 23 abril):</strong> Maquetación inicial. Creé el archivo HTML con la estructura base y empecé a aplicar las hojas de estilo (CSS) basándome en las prácticas que hicimos en la UT2 de Aplicaciones Web.</p>
+                <p><strong>Semana 3 (24 - 30 abril):</strong> Programación. Escribí el código en JavaScript para el formulario de la web. Me aseguré de que el botón respondiera bien y mostrara los mensajes correctos según los datos introducidos.</p>
+                <p><strong>Semana 4 (1 - 7 mayo):</strong> Revisión y corrección de errores. Estuve comprobando que la página no tuviera fallos, que el diseño no se rompiera y ajustando márgenes y colores en el CSS.</p>
+                <p><strong>Semana 5 (8 - 14 mayo):</strong> Redacción de contenidos. Me dediqué a escribir los textos de cada sección (SOM, Redes, MMEQ, SASP, IPE), explicando qué habíamos dado en cada unidad de trabajo a lo largo del curso.</p>
+                <p><strong>Semana 6 (15 - 22 mayo):</strong> Remates finales. Terminé de montar la tabla de temporalización y dejé el proyecto listo y empaquetado para su entrega final.</p>
+            </div>
+
+            <table>
+                <tr>
+                    <th>Fase del Proyecto</th>
+                    <th>Sem 1<br>(10-16 Abr)</th>
+                    <th>Sem 2<br>(17-23 Abr)</th>
+                    <th>Sem 3<br>(24-30 Abr)</th>
+                    <th>Sem 4<br>(1-7 May)</th>
+                    <th>Sem 5<br>(8-14 May)</th>
+                    <th>Sem 6<br>(15-22 May)</th>
+                </tr>
+                <tr>
+                    <td>Recopilar información de Moodle</td>
+                    <td class="pintado">X</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Crear HTML y estilos CSS</td>
+                    <td></td>
+                    <td class="pintado">X</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Programar script JS</td>
+                    <td></td>
+                    <td></td>
+                    <td class="pintado">X</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Revisión de errores de código</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="pintado">X</td>
+                    <td></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Redactar textos de las asignaturas</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="pintado">X</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Tabla temporal y entrega</td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td class="pintado">X</td>
+                </tr>
+            </table>
+        </section>
+
+    </div>
+
+    <script>
+        function comprobarModulos() {
+            let nombre = document.getElementById("nombre").value;
+            let modulos = document.getElementById("modulos").value;
+            let resultado = document.getElementById("resultado");
+
+            if (nombre === "" || modulos === "") {
+                resultado.innerHTML = "Por favor, escribe tu nombre y los módulos aprobados.";
+                resultado.style.color = "#c0392b";
+                return;
+            }
+
+            if (modulos >= 6) {
+                resultado.innerHTML = "¡Muy bien " + nombre + "! Con " + modulos + " módulos aprobados llevas un curso excelente. ¡A por 2º de SMR!";
+                resultado.style.color = "#27ae60";
+            } else {
+                resultado.innerHTML = "Ánimo " + nombre + ". Tienes " + modulos + " módulos aprobados, seguro que en las recuperaciones sacas los demás.";
+                resultado.style.color = "#e67e22";
+            }
+        }
+    </script>
+</body>
+</html>
